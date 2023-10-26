@@ -62,7 +62,12 @@ export function provideLocalStorageDataClass(className: string) {
   })
 
   function restoreRecord(): Record<string, unknown> {
-    const item = localStorage.getItem(localStorageKey)
+    let item
+    try {
+      item = localStorage.getItem(localStorageKey)
+    } catch {
+      return {}
+    }
     if (item === null) return {}
 
     try {

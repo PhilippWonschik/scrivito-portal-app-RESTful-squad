@@ -165,6 +165,7 @@ const PAGES = [
   'ProductsOverview',
 ]
 const DATA = [
+  'Event',
   'Notification',
   'Person',
   'Quote',
